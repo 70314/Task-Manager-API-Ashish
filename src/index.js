@@ -1,3 +1,4 @@
+require('dotenv').config();
 const  express = require('express')
 require('./db/mongoose')
 const userRouter = require('../src/routers/user')
@@ -13,5 +14,6 @@ app.use(taskRouter)
 
 app.listen(port)
 
+console.log(`Server is running on port ${port}`)
 const Task = require('./models/task')
 const User = require('./models/user')
